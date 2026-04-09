@@ -17,6 +17,7 @@
       <a href="#white">White hat visualization</a>
       <a href="#black">Black hat visualization</a>
       <a href="#refs">References &amp; process</a>
+      <a href="#extra-credit">Extra credit</a>
       <a href="#ai">AI usage</a>
     </nav>
 
@@ -100,6 +101,25 @@
       <h2>Development process</h2>
       <p>
         Work was completed solo. Roughly <strong>6–8 people-hours</strong> total: downloading and filtering the OWID CSV and exporting JSON (~1 h), implementing the white-hat bar chart in D3 (~2 h), designing and coding the dual-axis black-hat line chart (~2 h), writing the two long-form sections plus references (~2 h), and GitHub Pages deployment (~0.5 h). The most time went to <strong>calibrating the black-hat chart</strong> so it looked credible while remaining analyzable in the write-up, and to <strong>aligning text with the rubric’s white/black criteria</strong>.
+      </p>
+    </div>
+
+    <div class="meta-section" id="extra-credit">
+      <h2>Extra credit features (declared)</h2>
+      <p>
+        Per the assignment, the following items go beyond the base requirements and are submitted for extra-credit consideration.
+      </p>
+      <h3>1. Accessibility affordances on both graphics</h3>
+      <p>
+        Both D3 figures use SVG <code>role="img"</code> and descriptive <code>aria-label</code> text so assistive technologies can summarize what is on the canvas. The white-hat view also includes an explicit in-page “how to read” caption tied to the encoding (baseline, units, color). This goes beyond a typical static homework chart by treating the page as something that should be legible to more than only sighted, mouse-based readers.
+      </p>
+      <h3>2. Structured “visual literacy” pairing (caption + critique)</h3>
+      <p>
+        Each visualization is paired with a short <strong>reader-facing caption</strong> that models how to interpret the graphic at a glance (white hat: truthful reading cues; black hat: “surface reading” that names what a hurried viewer might infer). The longer write-ups then connect those cues to course themes (transparency, dual axes, cherry-picking, subtlety). That structure is meant to mirror misinformation-literacy pedagogy: show the artifact, name the likely takeaway, then unpack the mechanism. It is more than two isolated plots with disconnected paragraphs.
+      </p>
+      <h3>3. Verifiable embedded data slice</h3>
+      <p>
+        The site loads values from a checked-in <code>data/emissions.json</code> file derived from the public OWID CO₂ dataset, with source links in the references section. Anyone can cross-check the bars and line endpoints against the same upstream table, which supports the white-hat goal of transparency and makes the black-hat manipulations easier to audit in a reproducible way.
       </p>
     </div>
 

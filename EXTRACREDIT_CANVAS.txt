@@ -1,0 +1,9 @@
+EXTRA CREDIT FEATURES (paste into Canvas A2 submission text if required)
+
+Feature 1 — Accessibility: Both D3 SVGs use role="img" and descriptive aria-labels. The white-hat section includes an explicit "how to read" caption tied to units, baseline, and color. This goes beyond default charts by supporting assistive tech and clearer reading order.
+
+Feature 2 — Visual-literacy structure: Each chart has a short reader-facing caption (white hat: honest decoding; black hat: "surface reading" of what a quick glance suggests). The write-ups then explain the rhetorical mechanisms. This pairs artifact + likely takeaway + critique, similar to misinformation-literacy pedagogy—not just two plots with disconnected text.
+
+Feature 3 — Verifiable data: Values are served from public data/emissions.json traced to Our World in Data / OWID CO2 data, with links on the page. That makes the white-hat numbers auditable and the black-hat tricks easier to verify against the same source.
+
+Live page (for graders): https://dwarakeshbaraneetharan.github.io/CMSC471-A2/#extra-credit

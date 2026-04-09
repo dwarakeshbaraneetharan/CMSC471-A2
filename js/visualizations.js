@@ -92,7 +92,12 @@ function renderBlackHat(ts) {
     .select("#black-viz")
     .append("svg")
     .attr("width", w)
-    .attr("height", h);
+    .attr("height", h)
+    .attr("role", "img")
+    .attr(
+      "aria-label",
+      "Line chart of fossil CO2 emissions for China and the United States from 2010 to 2022, using a separate vertical scale for each country."
+    );
 
   const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
