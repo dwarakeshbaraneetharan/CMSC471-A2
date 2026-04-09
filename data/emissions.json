@@ -1,0 +1,177 @@
+{
+  "year": 2022,
+  "unit": "million tonnes CO2 (fossil, excluding land-use change)",
+  "source": "Our World in Data / Global Carbon Project (via OWID CO2 dataset)",
+  "source_url": "https://github.com/owid/co2-data",
+  "owid_article": "https://ourworldindata.org/co2-emissions",
+  "note": "Territorial fossil CO2 only; land-use change excluded.",
+  "countries": [
+    {
+      "country": "China",
+      "co2_million_tonnes": 11711.81
+    },
+    {
+      "country": "United States",
+      "co2_million_tonnes": 5055.4
+    },
+    {
+      "country": "India",
+      "co2_million_tonnes": 2831.13
+    },
+    {
+      "country": "Russia",
+      "co2_million_tonnes": 1675.46
+    },
+    {
+      "country": "Japan",
+      "co2_million_tonnes": 1029.64
+    },
+    {
+      "country": "Iran",
+      "co2_million_tonnes": 767.18
+    },
+    {
+      "country": "Indonesia",
+      "co2_million_tonnes": 758.02
+    },
+    {
+      "country": "Germany",
+      "co2_million_tonnes": 667.84
+    },
+    {
+      "country": "Saudi Arabia",
+      "co2_million_tonnes": 666.99
+    },
+    {
+      "country": "South Korea",
+      "co2_million_tonnes": 606.88
+    },
+    {
+      "country": "Canada",
+      "co2_million_tonnes": 547.66
+    },
+    {
+      "country": "Brazil",
+      "co2_million_tonnes": 480.06
+    },
+    {
+      "country": "Mexico",
+      "co2_million_tonnes": 453.8
+    },
+    {
+      "country": "Turkey",
+      "co2_million_tonnes": 443.6
+    },
+    {
+      "country": "South Africa",
+      "co2_million_tonnes": 428.78
+    }
+  ],
+  "time_series_selected": [
+    {
+      "country": "China",
+      "series": [
+        {
+          "year": 2010,
+          "co2": 8610.05
+        },
+        {
+          "year": 2015,
+          "co2": 9858.04
+        },
+        {
+          "year": 2020,
+          "co2": 10896.52
+        },
+        {
+          "year": 2022,
+          "co2": 11711.81
+        }
+      ]
+    },
+    {
+      "country": "United States",
+      "series": [
+        {
+          "year": 2010,
+          "co2": 5669.25
+        },
+        {
+          "year": 2015,
+          "co2": 5368.5
+        },
+        {
+          "year": 2020,
+          "co2": 4689.95
+        },
+        {
+          "year": 2022,
+          "co2": 5055.4
+        }
+      ]
+    },
+    {
+      "country": "India",
+      "series": [
+        {
+          "year": 2010,
+          "co2": 1678.53
+        },
+        {
+          "year": 2015,
+          "co2": 2231.82
+        },
+        {
+          "year": 2020,
+          "co2": 2422.73
+        },
+        {
+          "year": 2022,
+          "co2": 2831.13
+        }
+      ]
+    },
+    {
+      "country": "Russia",
+      "series": [
+        {
+          "year": 2010,
+          "co2": 1633.15
+        },
+        {
+          "year": 2015,
+          "co2": 1635.24
+        },
+        {
+          "year": 2020,
+          "co2": 1631.9
+        },
+        {
+          "year": 2022,
+          "co2": 1675.46
+        }
+      ]
+    },
+    {
+      "country": "Japan",
+      "series": [
+        {
+          "year": 2010,
+          "co2": 1211.09
+        },
+        {
+          "year": 2015,
+          "co2": 1219.98
+        },
+        {
+          "year": 2020,
+          "co2": 1037.29
+        },
+        {
+          "year": 2022,
+          "co2": 1029.64
+        }
+      ]
+    }
+  ]
+}

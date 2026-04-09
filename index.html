@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CMSC471 A2: White Hat / Black Hat CO₂ Visualizations</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>White Hat / Black Hat: National CO₂ Emissions</h1>
+      <p class="meta">CMSC471 Assignment 2 · Spring 2026 · Dataset: fossil CO₂ from Our World in Data (OWID)</p>
+    </header>
+
+    <nav class="toc">
+      <a href="#white">White hat visualization</a>
+      <a href="#black">Black hat visualization</a>
+      <a href="#refs">References &amp; process</a>
+      <a href="#ai">AI usage</a>
+    </nav>
+
+    <section id="white">
+      <span class="tag white">White hat</span>
+      <h2>Clear comparison of the largest national emitters</h2>
+
+      <div class="viz-card">
+        <h3>Top 15 territorial fossil CO₂ emitters (2022)</h3>
+        <p class="viz-sub">Single year · same metric for every country · axis starts at zero</p>
+        <div id="white-viz"></div>
+        <p class="viz-caption">
+          <strong>How to read this chart.</strong> Each bar shows annual <em>territorial</em> fossil CO₂ emissions in million tonnes, using the same source field for every country. The horizontal axis begins at zero so bar lengths are directly comparable. Darker blue indicates higher absolute emissions. Values are labeled at the end of each bar for precise reading.
+        </p>
+      </div>
+
+      <div class="writeup">
+        <h3>Dataset and scope</h3>
+        <p>
+          I use the <strong>Our World in Data CO₂ dataset</strong>, which compiles territorial fossil carbon dioxide emissions (excluding land-use change) from the Global Carbon Project and related sources. This aligns with the course option on greenhouse-gas-related emissions while keeping a single, well-documented measure. I focus on <strong>2022</strong> and the <strong>fifteen countries with the highest national totals</strong> that year. Territorial emissions attribute CO₂ to the country where fuel is burned; they do not reflect consumption-based accounting or trade in embedded carbon, which is an important limitation I state here rather than hiding in a footnote.
+        </p>
+
+        <h3>Design choices for clarity and honesty</h3>
+        <p>
+          I chose a <strong>horizontal bar chart</strong> because it supports accurate length comparisons for long country names and ranks. The <strong>x-axis starts at zero</strong>, which is essential for magnitude judgments: truncating the baseline would exaggerate or shrink gaps between countries. Bars are sorted in <strong>descending order by emissions</strong> so the rank structure matches the visual order. Color encodes magnitude with a <strong>sequential blue ramp</strong> (lighter to darker), reinforcing amount without implying an unrelated good-or-bad judgment. Tick labels and an axis title explicitly state the <strong>unit (million tonnes CO₂)</strong> and that the measure is fossil and territorial.
+        </p>
+
+        <h3>Transparency and limitations</h3>
+        <p>
+          The visualization does not mix per-capita and national totals, does not cherry-pick countries to imply a false ranking, and does not use a second vertical scale that could distort slopes. I document the data lineage in the references section and note that <strong>large population</strong> contributes to large national totals: readers should consult per-capita or consumption-based views for fairness comparisons across country size. Together, these choices aim to satisfy the white-hat criteria: interpretability for a general audience, explicit transformations (filter: year 2022; top 15 by that year’s total), and visible sourcing and bias context.
+        </p>
+
+        <h3>Alternatives considered</h3>
+        <p>
+          A world choropleth map would emphasize geography but can distort judgment by area; small countries with high per-capita emissions disappear when encoding totals. A line chart of national totals over decades would show trends but obscure the 2022 cross-section I wanted to highlight for this assignment. The ranked bar chart keeps the task focused: <strong>who emitted the most fossil CO₂ in one recent year under a single accounting rule</strong>, with minimal embellishment.
+        </p>
+      </div>
+    </section>
+
+    <section id="black">
+      <span class="tag black">Black hat</span>
+      <h2>Parallel trends in U.S. and Chinese emissions?</h2>
+
+      <div class="viz-card black-viz">
+        <h3>Emissions paths: China and the United States (2010–2022)</h3>
+        <p class="viz-sub">Dual vertical scales · only two countries shown</p>
+        <div id="black-viz"></div>
+        <p class="viz-caption">
+          <strong>Surface reading.</strong> The two lines occupy similar vertical ranges on the plot, suggesting comparable dynamics across the period. Axis labels identify which scale applies to which country.
+        </p>
+      </div>
+
+      <div class="writeup">
+        <h3>Manipulative techniques used</h3>
+        <p>
+          This figure is designed to look like a careful, professional comparison while encouraging a <strong>misleading conclusion</strong>. First, I apply <strong>independent dual y-axes</strong> for China (left, orange) and the United States (right, blue). Each scale is stretched to fit only that country’s own minimum and maximum over the selected years. Because both lines are forced to span most of the chart height, their <strong>visual slopes appear similarly steep</strong> even though the absolute changes are vastly different in million tonnes. This exploits a known pitfall of dual-axis charts: readers often compare line shape rather than reading numbers off two unrelated scales.
+        </p>
+        <p>
+          Second, I use <strong>selective filtering (cherry-picking)</strong>: I plot only China and the United States and omit rapidly growing emitters such as <strong>India</strong>, which would complicate a simple “two-superpower” story. The <strong>title and framing</strong> emphasize “paths” and pairing without stating that the visual similarity is largely an artifact of scaling. Third, the <strong>subtitle is vague</strong> (“dual vertical scales”) without explaining that the scales are not comparable, which weakens the reader’s guardrails. These choices target at least two rubric categories: <strong>misleading encodings / scales</strong> and <strong>misleading data scope</strong>, while keeping a polished aesthetic so the chart still feels trustworthy at a glance.
+        </p>
+
+        <h3>What a fair reading would require</h3>
+        <p>
+          A reader who extracts numeric values from the axes would see that China’s CO₂ total rises by well over two thousand million tonnes between 2010 and 2022, while the United States declines by a few hundred million tonnes in absolute terms. A single shared scale, or a chart of <strong>percentage change from a common baseline</strong> with a clear zero reference, or adding other major economies, would tell a less parallel-looking story. The black-hat write-up is intentionally explicit so instructors can verify intent while the standalone graphic remains subtly deceptive for practice viewers.
+        </p>
+
+        <h3>Why this passes as “subtle”</h3>
+        <p>
+          The graphic uses conventions that appear in legitimate dashboards: color contrast, dot markers, axis titles, and a legend. Nothing is misspelled; grid lines are present. The deception relies on <strong>scale choices and omission</strong> rather than clownish distortion, so a hurried reader may conclude the two series are “similarly volatile” without checking tick values. That balance matches the assignment’s warning that cartoonish lying is easy to spot, whereas <strong>plausible-seeming</strong> graphics better train critical reading.
+        </p>
+      </div>
+    </section>
+
+    <div class="meta-section" id="refs">
+      <h2>References</h2>
+      <ul>
+        <li>Our World in Data. <em>CO₂ and Greenhouse Gas Emissions</em> data (CSV). <a href="https://github.com/owid/co2-data" target="_blank" rel="noopener">github.com/owid/co2-data</a></li>
+        <li>Our World in Data. <a href="https://ourworldindata.org/co2-emissions" target="_blank" rel="noopener">ourworldindata.org/co2-emissions</a> (context and methods).</li>
+        <li>Course readings on deceptive visualization (Correll &amp; Heer; Cairo; Hullman &amp; Diakopoulos) informed the black-hat design.</li>
+      </ul>
+
+      <h2>Development process</h2>
+      <p>
+        Work was completed solo. Roughly <strong>6–8 people-hours</strong> total: downloading and filtering the OWID CSV and exporting JSON (~1 h), implementing the white-hat bar chart in D3 (~2 h), designing and coding the dual-axis black-hat line chart (~2 h), writing the two long-form sections plus references (~2 h), and GitHub Pages deployment (~0.5 h). The most time went to <strong>calibrating the black-hat chart</strong> so it looked credible while remaining analyzable in the write-up, and to <strong>aligning text with the rubric’s white/black criteria</strong>.
+      </p>
+    </div>
+
+    <div class="meta-section" id="ai">
+      <h2>AI usage</h2>
+      <p>
+        I used <strong>Cursor</strong> with an LLM assistant to speed up boilerplate (HTML structure, D3 scales and axes, CSS layout) and to sanity-check wording in the write-ups. Design decisions—including dataset choice, which black-hat tricks to combine (dual axes + cherry-picking + vague framing), and the white-hat insistence on a zero baseline—were mine. I reviewed all emitted code and tested the page locally before publishing.
+      </p>
+    </div>
+  </div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="js/visualizations.js"></script>
+</body>
+</html>

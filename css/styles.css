@@ -1,0 +1,169 @@
+:root {
+  --bg: #f6f7f9;
+  --card: #fff;
+  --text: #1a1d26;
+  --muted: #5c6370;
+  --accent: #2563eb;
+  --border: #e2e5eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1.25rem;
+}
+
+header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  line-height: 1.25;
+}
+
+header .meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+nav.toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+nav.toc a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+nav.toc a:hover {
+  text-decoration: underline;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  font-size: 1.35rem;
+  margin: 0 0 0.5rem;
+}
+
+section .tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.tag.white {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.tag.black {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.viz-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem 1rem 1.5rem;
+  margin: 1rem 0 1.5rem;
+  overflow-x: auto;
+}
+
+.viz-card h3 {
+  font-size: 1.05rem;
+  margin: 0 0 0.25rem;
+}
+
+.viz-card .viz-sub {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+
+.viz-caption {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.writeup {
+  font-size: 0.95rem;
+}
+
+.writeup p {
+  margin: 0 0 1rem;
+}
+
+.writeup h3 {
+  font-size: 1.05rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.meta-section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.meta-section h2 {
+  font-size: 1.15rem;
+  margin-top: 0;
+}
+
+.meta-section ul {
+  margin: 0.5rem 0;
+  padding-left: 1.25rem;
+}
+
+.axis path,
+.axis line {
+  stroke: #ccc;
+}
+
+.axis text {
+  font-size: 11px;
+  fill: var(--muted);
+}
+
+.grid line {
+  stroke: #eee;
+}
+
+.black-viz .axis-title {
+  font-size: 11px;
+  font-weight: 600;
+}

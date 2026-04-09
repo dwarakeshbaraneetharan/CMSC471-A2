@@ -1,0 +1,26 @@
+CMSC471 Assignment 2 - Demo video script (2-3 min)
+
+OPEN: https://dwarakeshbaraneetharan.github.io/CMSC471-A2/
+
+1) INTRO (20 sec)
+"This is my Assignment 2 white hat and black hat visualization page. Both use the same underlying Our World in Data CO2 dataset, but they tell very different stories."
+
+2) WHITE HAT (45 sec)
+Scroll to the first chart.
+"This is the white hat view: horizontal bars for the top 15 countries by territorial fossil CO2 in 2022. The axis starts at zero, so you can compare lengths honestly. Bars are sorted by emissions, units are labeled, and the caption explains territorial accounting and limits."
+
+3) WRITE-UP (20 sec)
+Scroll through the white hat write-up briefly.
+"I describe the dataset, design choices, and what I did not do—like mixing per capita with totals."
+
+4) BLACK HAT (50 sec)
+Scroll to the second chart.
+"This is the black hat view: China and the US over four years with two y-axes. Each country gets its own scale, so both lines fill the chart and look similarly steep. I also dropped other major emitters like India. A quick glance suggests parallel dynamics; reading the tick numbers shows China’s rise is much larger in absolute million tonnes."
+
+5) BLACK WRITE-UP (25 sec)
+"I spell out the dual-axis trick, cherry-picking, and framing in the black hat section so graders see intent."
+
+6) REFERENCES / PROCESS / AI (15 sec)
+Scroll to the bottom meta sections.
+
+CLOSE: "URL is on GitHub Pages; this recording timestamps the demo."
